@@ -1,0 +1,41 @@
+[user]
+    email = xxx
+    name = Fabrice Baumann
+
+[alias]
+    st = status --branch --short
+    wat = log --graph --decorate --oneline -15
+    cd = checkout
+    patch = add --patch
+    unstage = reset HEAD --
+    unstage-patch = reset HEAD --patch
+    com = commit -m
+    df = diff -w -D
+    dfc = diff -w -D --cached
+    f = fetch
+    rb = rebase
+    rbc = "!f() { git rebase origin/$1; }; f"
+    rbi = "!f() { git rebase -i origin/$1; }; f"
+    rcn = remote prune origin
+    ggc = gc --prune --aggressive
+
+[color]
+    ui   = true
+    diff = true
+
+[color "branch"]
+    current = blue
+    local   = yellow
+    remote  = green
+
+[color "status"]
+    added     = green
+    changed   = yellow
+    untracked = red
+
+[pull]
+    rebase = preserve
+
+[push]
+    default = simple
+
